@@ -1,0 +1,15 @@
+instalar node
+
+npm install express
+criar estrutura de pastas => public com arquivos css,js, images | src com database e views com arquivos html
+criar arquivos pages.js e server.js
+pages para configurar as rotas
+server para inicializar o servidor
+
+npm install nodemon
+mudar para
+"scripts": {
+    "start": "nodemon src/server.js"
+}, em package.json após instalar o nodemon
+
+npm install hbs
