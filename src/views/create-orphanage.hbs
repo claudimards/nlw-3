@@ -34,7 +34,9 @@
         
         <div id="page-create-orphanage">
             <aside class="animate-right sidebar">
-                <img src="/images/map-marker.svg" alt="Happy">
+                <a href="/">
+                    <img src="/images/map-marker.svg" alt="Happy">
+                </a>
                 <footer>
                     <button onclick="history.back()">
                         <img src="/images/arrow-back.svg" alt="Voltar">
@@ -43,13 +45,13 @@
             </aside>
 
             <main class="animate-appear with-sidebar">
-                <form action="">
+                <form action="save-orphanage" method="post" onsubmit="validate(event)">
                     <fieldset>
                         <legend>Dados</legend>
                         <div class="map-container">
                             <div id="mapid"></div>
-                            <input type="hidden" name="lat">
-                            <input type="hidden" name="lng">
+                            <input type="hidden" name="lat" required>
+                            <input type="hidden" name="lng" required>
 
                             <footer>
                                 <a id="select-point" href="#">Clique no mapa para adicionar a localização</a>
@@ -76,7 +78,7 @@
                             
                             <div id="images" class="images-upload">
                                 <div class="new-upload">
-                                    <input name="images" placeholder="Cole o link da foto aqui" required>
+                                    <input name="images" type="url" placeholder="Cole o link da foto aqui" required>
                                     <span onclick="deleteField(event)">
                                         <img src="/images/remove-file.svg" alt="Remover foto">
                                     </span>
@@ -97,8 +99,8 @@
                         </div>
 
                         <div class="input-block">
-                            <label for="opening-hours">Horário das visitas</label>
-                            <input id="opening-hours" name="opening-hours" required>
+                            <label for="opening_hours">Horário das visitas</label>
+                            <input id="opening_hours" name="opening_hours" required>
                         </div>
 
                         <div class="input-block">
